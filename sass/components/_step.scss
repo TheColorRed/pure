@@ -1,0 +1,60 @@
+ul.pure-step {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  align-items: stretch;
+  width: 100%;
+  flex-wrap: nowrap;
+
+  & > li.pure-step--active {
+    & ~ li:before {
+      background: $dark-gray;
+    }
+
+    & ~ li a:before {
+      background: $dark-gray;
+    }
+
+    & a {
+      &:before {
+        background: #ffffff;
+        border: solid .1rem $secondary-color;
+      }
+    }
+  }
+
+  & > li {
+    flex: 1;
+    text-align: center;
+    position: relative;
+
+    &:not(:first-child):before {
+      background: $secondary-color;
+      content: '';
+      height: 3px;
+      left: -50%;
+      position: absolute;
+      top: -15px;
+      width: 100%;
+    }
+
+    & > a {
+      color: $dark-gray;
+
+      &:before {
+        background: $secondary-color;
+        border: .1rem solid #fff;
+        border-radius: 50%;
+        content: '';
+        display: block;
+        height: .6rem;
+        left: 50%;
+        position: absolute;
+        top: -20px;
+        transform: translateX(-50%);
+        width: .6rem;
+        z-index: 1;
+      }
+    }
+  }
+}
