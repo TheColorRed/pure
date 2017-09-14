@@ -6,22 +6,26 @@ button,
   border: 0;
   padding: 0.5rem 0.8rem;
   font-size: 1rem;
-  font-weight: 300;
   color: $secondary-color;
   background-color: transparent;
   // transition: background 0.4s ease-in-out;
   display: inline-block;
   text-align: center;
   cursor: pointer;
-  letter-spacing: 1px;
+  letter-spacing: $core-letter-spacing;
 
   &.pure-button--block {
     width: 100%;
   }
 
-  &.small {
+  &.pure-button--small {
     font-size: 0.7rem;
     padding: 0.4rem;
+  }
+
+  &.pure-button--large {
+    font-size: 1.2rem;
+    padding: 0.6rem 1rem;
   }
 
   // &:hover {

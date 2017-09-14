@@ -7,15 +7,20 @@ ul.pure-step {
   flex-wrap: nowrap;
 
   & > li.pure-step--active {
-    & ~ li:before {
-      background: $dark-gray;
-    }
+    & ~ li {
+      // Drw the incomplted step line
+      &:before {
+        background: $dark-gray;
+      }
 
-    & ~ li a:before {
-      background: $dark-gray;
+      // Draw the incompleted step dot
+      & a:before {
+        background: $dark-gray;
+      }
     }
 
     & a {
+      // Draw The current step dot
       &:before {
         background: #ffffff;
         border: solid .1rem $secondary-color;
@@ -28,19 +33,21 @@ ul.pure-step {
     text-align: center;
     position: relative;
 
+    // Draw the default step line
     &:not(:first-child):before {
       background: $secondary-color;
       content: '';
-      height: 3px;
+      height: 0.2rem;
       left: -50%;
       position: absolute;
-      top: -15px;
+      top: -1.02rem;
       width: 100%;
     }
 
     & > a {
       color: $dark-gray;
 
+      // Draw the completed step dot
       &:before {
         background: $secondary-color;
         border: .1rem solid #fff;
@@ -50,7 +57,7 @@ ul.pure-step {
         height: .6rem;
         left: 50%;
         position: absolute;
-        top: -20px;
+        top: -1.3rem;
         transform: translateX(-50%);
         width: .6rem;
         z-index: 1;

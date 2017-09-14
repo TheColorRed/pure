@@ -1,6 +1,6 @@
 .pure-card {
   background: #ffffff;
-  min-height: 200px;
+  min-height: 100px;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.2);
 
   & > .pure-card--header {
@@ -18,12 +18,12 @@
       margin: 0;
       padding: 0;
       font-weight: 200;
+      font-size: 2rem;
     }
   }
 
   & > .pure-card--content {
     padding: $card-padding;
-    font-weight: 200;
   }
 
   & > .pure-card--action {

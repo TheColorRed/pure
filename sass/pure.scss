@@ -6,9 +6,10 @@
 }
 
 :root {
-  font-size: 20px;
-  font-weight: 300;
+  font-size: $core-font-size;
+  font-weight: $core-font-weight;
   font-family: 'Montserrat', sans-serif;
+  letter-spacing: $core-letter-spacing;
 }
 
 body {
@@ -40,6 +41,10 @@ h6 {
 @import 'components/list';
 @import 'components/table';
 @import 'components/step';
-@import 'components/divider';
-@import 'components/depth';
-@import 'components/color';
+@import 'components/tooltip';
+
+// Import all of the utilities
+@import 'utility/divider';
+@import 'utility/depth';
+@import 'utility/color';
+@import 'utility/text';
