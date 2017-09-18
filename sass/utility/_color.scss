@@ -1,12 +1,13 @@
 @mixin color-maker($class-root, $color, $type) {
-  @for $i from 1 through $color-lighten-darken-count {
-    #{$class-root} {
-      #{$type}: $color;
-    }
+  #{$class-root} {
+    #{$type}: $color;
+  }
 
-    #{$class-root}-hover:hover {
-      #{$type}: $color;
-    }
+  #{$class-root}-hover:hover {
+    #{$type}: $color;
+  }
+
+  @for $i from 1 through $color-lighten-darken-count {
 
     // We can't lighten white, so don't make the lighten class
     @if $color != #ffffff {
@@ -48,7 +49,7 @@
 // Create the additional colors
 @each $name, $color in $additional-colors {
   @include color-maker($name, $color, background-color);
-  @include color-maker($name, $color, color);
+  @include color-maker($name + '-text', $color, color);
 }
 
 .accent {

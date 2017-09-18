@@ -1,3 +1,14 @@
+hr,
+.pure-divider {
+  display: block;
+  margin: 0.8rem 0;
+  position: relative;
+  width: 100%;
+  border: 0;
+  border-top: .05rem solid #e7e9ed;
+  height: 0;
+}
+
 .pure-divider--vertical {
   display: block;
   padding: 0.8rem;
